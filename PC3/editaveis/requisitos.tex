@@ -1,0 +1,260 @@
+\chapter[Requisitos]{Requisitos}
+
+Foi conduzido um teste piloto através de um questionário para médicos geriatras, cuidadores e enfermeiros de instituições de longa permanência para idosos disponível no apêndice \ref{questionario_app} e uma entrevista com um farmacêutico no apêndice \ref{entrevista_app}. Sendo assim, os questionários foram encaminhados via Internet com o objetivo de selecionar as necessidades do cliente. 
+
+\section{Requisitos Gerais do Sistema}
+
+Com o disposto nos questionários, elaboraram-se os requisitos gerais constantes na Tab. \ref{tab:req_gerais}.
+\begin{table}[H]
+    \centering
+    \caption{Requisitos Gerais}
+    \begin{tabular}{|L{2cm}|L{8cm}|C{2.5cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Requisito} & \textbf{Prioridade} \\
+        \hline
+        RG001 & Armazenar comprimidos de diferentes formatos, tamanhos e textura & \textit{Must have}\\ 
+        \hline
+        RG002 & Facilitar o abastecimento do estoque de medicamentos & \textit{Must have} \\
+        \hline
+        RG003 & Garantir um ambiente de armazenamento seguro (temperatura, umidade e sem micro-organismos) & \textit{Must have}\\ 
+        \hline
+        RG004 & Armazenar comprimidos de no mínimo 5 pacientes  & \textit{Should have}\\ 
+        \hline
+        RG005 & Emitir sinais de alerta & \textit{Should have}\\ 
+        \hline
+        RG006 & Assegurar que a dose medicamentosa esteja correta para um paciente específico & \textit{Must have}\\
+        \hline
+        RG007 & Notificar os usuários em relação a doses não tomadas & \textit{Must have}\\
+        \hline
+        RG008 & Regular o horário de ministração medicamentos & \textit{Must have}\\ 
+        \hline
+        RG009 &  Identificação e comprovar o paciente  & \textit{Should have}\\
+        \hline
+        RG010 & Ter interface fácil de uso no dispositivo e no aplicativo & \textit{Must have}\\
+        \hline
+        RG011 & Visualização do histórico de medicamentos dos pacientes & \textit{Must have}\\ 
+        \hline
+    \end{tabular}\label{tab:req_gerais}
+\end{table}
+
+
+\section{Requisitos dos Subsistemas}
+\subsection{Requisitos Estruturais}
+
+Os requisitos referentes a parte estrutural e de transporte do projeto são deliberados na Tab. \ref{tab:req_estruturais}.
+
+\begin{table}[H]
+        \centering
+    \caption{Requisitos Estruturais}
+	\begin{adjustbox}{max width = \textwidth}
+        \begin{tabular}{|L{1.5cm}|L{8.5cm}|C{2.5cm}|C{3.5cm}|}
+            \hline
+            \rowcolor[HTML]{A8DADC}
+            \textbf{ID} & \textbf{Requisito} & \textbf{Prioridade} & \textbf{Ambiente} \\
+            \hline
+            RE001 & Armazenar medicamentos sólidos com isolamento admissível para temperatura, umidade e luminosidade & \textit{Must have} & Contêiner\\ 
+            \hline
+            
+            RE002 & Cobrir grande variedade de dimensões dos medicamentos comerciais no sistema de seleção & \textit{Should have} & Contêiner \\
+            \hline
+            
+            RE003 & Ter armazenamento removível para limpeza & \textit{Must have} & Sistema de seleção\\
+            \hline
+            
+            RE004 & Verificar materiais adequados para alocação de medicamentos na máquina & \textit{Must have} & Estrutura geral\\
+            \hline
+            
+            RE005 &  Garantir estrutura de proteção para componentes internos & \textit{Must have} & Carcaça\\
+            \hline
+            
+            RE006 & Confirmar a saída de um único medicamento sólido do contêiner com alta acurácia & \textit{Must have}  & Comporta\\ 
+            \hline
+            
+            RE007 & Ter estoque recipientes que receberão a dose selecionada de medicamentos & \textit{Must have} & Reservatório de copos\\
+            \hline
+            
+            RE008 & Garantir que os medicamentos selecionados irão cair no recipiente do paciente & \textit{Must have}  & Cone de direcionamento\\ 
+            \hline
+            
+            RE009 & Posicionar os copos dos pacientes no local de deposição da medicação & \textit{Must have} & Atuador linear\\
+            \hline
+            
+            RE010 & Deslocar o recipiente com dose selecionada de medicamentos até o local de retirada & \textit{Must have} & Esteira\\ 
+            \hline
+            
+            RE011 & Designar local de retenção do recipiente com medicamentos selecionados com falha & \textit{Must have} & Compartimento traseiro\\
+            \hline
+            
+            RE012 & Disponibilizar local de retirada dos recipientes com dosagem correta & \textit{Must have}  & Compartimento frontal\\ 
+            \hline
+            
+            RE013 & Dispor um sistema estrutural adequado para manutenções preventivas & \textit{Should have} & Estrutura geral \\
+            \hline
+            
+            %RE014 & Garantir acoplamento adequado dos eixos com as engrenagens e fusos do sistema & Should have & Estrutura geral \\
+            %\hline
+        \end{tabular}
+	\end{adjustbox}
+	\label{tab:req_estruturais}
+\end{table}
+
+
+\newpage
+\subsection{Requisitos Eletrônicos}
+
+Os requisitos referentes a parte eletrônica do projeto são deliberados na Tab. \ref{tab:req_eletronica}.
+
+\begin{table}[H]
+    \centering
+    \caption{Requisitos Eletrônicos}
+    \label{tab:req_ele_sensor1}
+	\begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-1.3cm}{}
+        \begin{tabular}{|L{1.5cm}|L{8.5cm}|C{2.5cm}|C{3.5cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Requisitos} & \textbf{Prioridade} & \textbf{Ambiente} \\ \hline
+        RC001 & Avisar do trancamento da porta com acesso ao estoque & \textit{Must have} & Sensoriamento\\ \hline
+        RC002 & Avisar a acoplagem dos compartimentos de medicamentos & \textit{Must have} & Sensoriamento\\ \hline
+        RC003 & Detectar temperaturas fora da faixa de conservação & \textit{Must have} & Sensoriamento\\ \hline
+        RC004 & Detectar umidade relativa do ar fora da faixa de conservação & \textit{Must have} & Sensoriamento\\ \hline
+        RC005 & Detectar a passagem de medicamento após sair do contêiner individual &  \textit{Must have} & Sensoriamento\\ \hline
+        RC006 & Assegurar a presença do copo no local de despejo do medicamento & \textit{Must have} & Sensoriamento\\ \hline
+        RC007 & Detectar a passagem de medicamento no local de despejo do medicamento & \textit{Must have} & Sensoriamento\\ \hline
+        RC008 & Assegurar quantidade de comprimidos no copo & \textit{Should have} & Sensoriamento\\ \hline
+        RC009 & Assegurar o transporte do recipiente para porta de saída do dispensador & \textit{Must have} & Sensoriamento\\ \hline
+        RC010 & Assegurar que o copo não aprovado irá para o módulo de reaproveitamento de medicamentos & \textit{Should have} & Sensoriamento\\ \hline
+        RC011 & Assegurar a retirada do recipiente por funcionário autorizado & \textit{Should have} & Sensoriamento\\ \hline
+        RC012 & Detectar a saída do copo do dispensador & \textit{Must have} & Sensoriamento\\ \hline
+        RC013 & Detectar falhas de sensores no módulo de medição & \textit{Should have} & Sensoriamento\\ \hline
+        RC014 & Assegurar o abastecimento dos estoques por funcionário autorizado & \textit{Must have} & Sensoriamento\\ \hline
+        RC015 & Detecção de funcionário autorizado por autenticação física & \textit{Must have} & Sensoriamento \\ \hline
+        RC016 & Armazenar dados locais na central de dados & \textit{Must have} & Comunicação\\ \hline
+        RC017 & Haver um sistema embarcado na central de controle & \textit{Must have} & Comunicação\\ \hline
+        RC018 & Processar dados dos módulos de medição  pela central & \textit{Must have} & Comunicação\\ \hline
+        RC019 & A central de controle deve funcionar de forma desconectada da internet & \textit{Must have} & Comunicação\\ \hline
+        RC020 & Comunicar a central de controle  com o módulo de visualização & \textit{Must have} & Comunicação\\ \hline
+        RC021 & Comunicar a central de controle com os módulos de medição & \textit{Must have} & Comunicação\\ \hline
+        RC022 & Comunicar a central de controle com os atuadores & \textit{Must have} & Comunicação\\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+	\end{adjustbox}    
+    \label{tab:req_eletronica}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    %\caption{Requisitos Eletrônicos}
+    %\label{tab:req_ele_sensor2}
+	\begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-1.3cm}{}
+        \begin{tabular}{|L{1.5cm}|L{8.5cm}|C{2.5cm}|C{3.5cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Requisitos} & \textbf{Prioridade} & \textbf{Ambiente} \\ \hline
+        RC023 & Comunicar a  central de controle com a central de dados (\textit{back-end}) & \textit{Must have} & Comunicação\\ \hline
+        RC024 & Assegurar a seleção correta do medicamento no estoque a partir dos dados cadastrados no \textit{back-end} & \textit{Must have} & Comunicação\\ \hline
+        RC025 & Detectar falhas de comunicação no módulo de medição & \textit{Should have} & Comunicação\\ \hline
+        RC026 & Controlar o transporte do recipiente & \textit{Must have} & Controle \\ \hline
+        RC027 & Controlar os atuadores & \textit{Must have} & Controle \\ \hline
+        RE
+        RC028 & Controlar o trancamento da porta com acesso ao estoque & \textit{Must have} & Controle \\ \hline
+        RC029 & Controlar o trancamento da porta de saída do copo no dispensador & \textit{Must have} & Controle \\ \hline
+        RC030 & Controlar a temperatura interna & \textit{Should have} & Controle \\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+	\end{adjustbox}  
+\end{table}
+
+\subsection{Requisitos Energéticos}
+
+Os requisitos referentes a parte energética do projeto são deliberados na Tab. \ref{tab:req_energeticos}.
+
+\begin{table}[H]
+    \centering
+    \caption{Requisitos Energéticos}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-1.3cm}{}
+        \begin{tabular}{|L{1.5cm}|L{8.5cm}|C{2.5cm}|C{3.5cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Requisito} & \textbf{Prioridade} & \textbf{Ambiente} \\
+        \hline
+        RA001 & Fornecer a energia necessária para os componentes eletrônicos e para os atuadores & \textit{Must have}  & Fonte de alimentação principal \\ 
+        \hline
+        
+        RA002 & Atender os critérios de eficiência energética e segurança do produto & \textit{Must have} & Fonte de alimentação principal \\
+        \hline
+        
+        RA003 & Ser provido de um sistema de backup quando houver a interrupção do fluxo de energia da fonte principal & \textit{Must have} & Fonte de alimentação secundária \\ 
+        \hline
+        
+        RA004 & Garantir uma operação versátil e eficaz do movimento mecânico da estrutura dos compartimentos dos medicamentos sólidos & \textit{Must have} & Sistema eletromecânico\\ 
+        \hline
+        
+        RA005 & Garantir uma operação eficaz para a abertura e fechamento das comportas & \textit{Must have} & Sistema eletromecânico \\ 
+        \hline
+        
+        RA006 & Garantir a alimentação adequada para o funcionamento do atuador elétrico linear& \textit{Must have} & Fonte de alimentação principal \\ \hline
+        
+        RA007 & Acionar o mecanismo de locomoção do recipiente com a dose medicamentosa& \textit{Must have} & Sistema eletromecânico\\ 
+        \hline
+        
+        \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+    \label{tab:req_energeticos}
+\end{table}
+
+\newpage
+\subsection{Requisitos de Software}
+Os requisitos referentes à solução em software são são deliberados na Tab. \ref{tab:req_software}.
+
+\begin{table}[H]
+    \centering
+    \caption{Requisitos de Software}
+	\begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-1.3cm}{}
+        \begin{tabular}{|L{1.5cm}|L{8.5cm}|C{2.5cm}|C{3.5cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Requisito} & \textbf{Prioridade} & \textbf{Ambiente} \\
+        \hline
+        RS001 & Cadastrar o administrador do sistema & \textit{Must have}& \textit{Front-end}/\textit{Spring}\\ 
+        \hline
+        RS002 & Cadastrar um enfermeiro e suas respectivas informações {nome completo, sexo, idade, etc.} & \textit{Must have} & \textit{Front-end}/\textit{Spring} \\
+        \hline
+        RS003 & Cadastrar um paciente e suas respectivas informações {nome completo, sexo, idade, etc.} & \textit{Must have} & \textit{Front-end/Spring} \\ 
+        \hline
+        RS004 & Cadastrar receita médica e suas respectivas informações {completar futuramente} & \textit{Must have} & \textit{Front-end/Spring} \\ 
+        \hline
+        RS005 & Cadastrar medicamento e suas respectivas informações {nome, \textit{tag}, lote, validade, etc.} & \textit{Must have} & \textit{Front-end/Spring} \\ 
+        \hline
+        RS006 & Capturar informações do banco de dados para criação do histórico de medicação do paciente & \textit{Must have} & \textit{Spring} \\
+        %RS006 & Capturar informações do banco de dados para criação de relatórios diários, semanais e mensais relacionados ao histórico de medicação do paciente & Should have & Python/Spring \\
+        \hline
+        RS007 & Exibir histórico de medicação do paciente & \textit{Must have} & \textit{Front-end/Spring} \\
+        %RS007 & Exibir relatórios diários, semanais e mensais relacionados ao histórico de medicação do paciente & Should have & Front End/Spring \\
+        \hline
+        RS008 & Alertar o enfermeiro em relação a medicação de um paciente & \textit{Must have} & \textit{Front-end}/\textit{Back-end} \\ 
+        \hline
+        RS09 & Alertar o enfermeiro quando a medicação de algum dos pacientes assistidos por ele estiver próxima de esgotar & \textit{Must have} & \textit{Front-end}/\textit{Spring} \\
+        \hline
+        RS010 & Comunicar com o dispensador com protocolos MQTT e/ou HTTP & \textit{Must have} & \textit{Spring} \\ 
+        \hline
+        RS011 & Autenticar login entre perfis separados (administrador, enfermeiro(a)) & \textit{Should have} & \textit{Front-end}/\textit{Back-end} \\ 
+        \hline
+        %RS014 & Criar e gerenciar QR Codes para validação da medicação retirada da máquina & Could have & Front End/Back End \\ \hline
+        RS012 & Exibir tela para que o enfermeiro confirme se o paciente recebeu a medicação ou não & \textit{Must have} & \textit{Front-end}/\textit{Back-end} \\ \hline
+        RS013 & Exibir dados cadastrais dos perfis existentes & \textit{Must-have} & \textit{Front-end}/\textit{Back-end} \\ \hline
+        RS014 & Atualizar dados cadastrais do perfis existentes & \textit{Must have} & \textit{Front-end}/\textit{Back-end} \\ \hline
+        RS015 & Remover logicamente usuários existentes quando for necessário & \textit{Must-have} & \textit{Front-end}/\textit{Back-end} \\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+	\end{adjustbox}
+	\label{tab:req_software}
+\end{table}
+
+
