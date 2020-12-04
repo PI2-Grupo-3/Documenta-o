@@ -1,0 +1,475 @@
+\chapter[Riscos]{Riscos}
+
+O plano de risco tem como objetivo descrever quais são os riscos do projeto e como eles serão monitorados e controlados ao longo das \textit{sprints}, visando entender seus impactos e procurando formas de mitigar esses possíveis riscos.
+
+A Estrutura Analítica de Riscos (EAR) facilita a identificação dos riscos em projetos. Dessa forma, tem por função mostrar as principais categorias de riscos para um projeto, servindo como guia para análise do contexto, da documentação e para o questionamento das partes interessadas, buscando ganho de tempo na identificação dos riscos.
+Os riscos podem ser divididos nas seguintes categorias:
+
+\begin{itemize}
+\item Técnicos: Envolvem os requisitos, a tecnologia, as ferramentas, a infraestrutura e a operação;
+\item Projeto: Envolvem estratégia, estrutura e prioridade de processos;
+\item Externos: Envolvem fornecedores, legislação e condições ambientais;
+\item Produto: Envolvem mudanças no escopo, prazo, custos, falta e/ou inadequações dos recursos humanos, interesse das partes e comunicação.
+\end{itemize}
+
+\section{Análise Quantitativa de Riscos}
+
+A análise quantitativa tem por objetivo a priorização e categorização dos riscos, de acordo com 2 métricas:
+
+\begin{itemize}
+\item Probabilidade: chances de um risco ocorrer. Sendo assim, a probabilidade de ocorrência de cada risco é quantificada a partir dos intervalos de Muito Baixa, Baixa, Média, Alta e Muito Alta, representado pela porcentagem na Tab. \ref{tab:probabilidade}.
+
+\begin{table}[H]
+\centering
+\caption{Probabilidade do Risco}
+\label{tab:probabilidade}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{Probabilidade} & \textbf{Certeza} & \textbf{Peso} \\ \hline
+Muito baixa	 & 0 a 20 \% & 1
+ \\ \hline
+Baixa & 20 a 40 \% & 2 \\ \hline
+Média & 40 a 60 \% & 3 \\ \hline
+Alta & 60 a 80 \% & 4 \\ \hline
+Muito Alta & 80 a 100 \% & 5 \\ \hline
+\end{tabular}
+\end{table}
+
+\item Impacto: O quanto o risco impacta no projeto. Sendo assim, o impacto é quantificado a partir dos intervalos de Muito Baixo, Baixa, Médio, Alto e Muito Alto, representado com a descrição na Tab. \ref{tab:impacto}.
+
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{ Impacto do Risco}
+\label{tab:impacto}
+\begin{tabular}{|c|c|c|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{Impacto} & \textbf{Descrição} & \textbf{Peso} \\ \hline
+Muito baixo	 & Pouco Expressivo	 & 1
+ \\ \hline
+Baixo & Pouco Impacto & 2 \\ \hline
+Médio & Impacto Médio & 3 \\ \hline
+Alto & Grande Impacto & 4 \\ \hline
+Muito Alto & Impacto impede o prosseguimento do projeto & 5 \\ \hline
+\end{tabular}
+\end{table}
+
+O grau de risco é definido pela multiplicação da probabilidade pelo impacto. A Tab. \ref{tab:prioridade_risco} explicita a correspondência do valor numérico com a prioridade.
+
+\begin{table}[H]
+\centering
+\caption{ Prioridade do Risco}\label{tab:prioridade_risco}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{Ip} & \textbf{Muito Baixa} & \textbf{Baixa} & \textbf{Média} & \textbf{Alta} & \textbf{Muito Alta} \\ \hline
+Muito Baixa & 1 & 2 & 3 & 4 & 5
+ \\ \hline
+Baixa & 2 & 4 & 6 & 8 & 10 \\ \hline
+Média & 3 & 6 & 9 & 12 & 15 \\ \hline
+Alta & 4 & 8 & 12 & 16 & 20 \\ \hline
+Muito Alta & 5 & 10 & 15 & 20 & 25 \\ \hline
+\end{tabular}
+\end{table}
+
+Sendo que:
+
+Risco >= 15: Elevado
+
+5 < Risco < 15: Médio
+
+Risco =< 5: Baixo
+
+\section{Descrição dos Riscos}
+
+\subsection{Riscos do Projeto, Externos e do Produto}
+
+\begin{table}[H]
+\centering
+\caption{ Risco de Projeto }
+\begin{tabular}{|l|C{6cm}|L{8cm}|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+1 & Mudança Arquitetônica & Gera retrabalho, como alteração nas soluções já elaboradas do projeto\\ \hline
+2 & Mudança de Escopo & Alteração no cronograma e refatoração dos requisitos e da documentação \\ \hline
+3 & Falha na Comunicação & Gera erros e perdas de informação \\ \hline
+4 & Imaturidade na gerência & Diminui qualidade das entregas, aumenta o custo do projeto, afeta o planejamento, atrasando as atividades planejadas. Exige refatoração de artefatos \\ \hline
+5 & Desistência de membros & Sobrecarga dos membros remanescentes, redistribuição de tarefas \\ \hline
+6 & Descomprometimento da Equipe & Falhas na entrega, desgaste nos membros comprometidos gera falta de qualidade nas entregas
+ \\ \hline
+7 & Erro de Priorização & Estimativa de produtividade e refatorações \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Riscos Externos}
+\begin{tabular}{|l|C{6cm}|L{8cm}|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+8 & Greve na Unb & Viabilidade do projeto \\ \hline
+9 & Integrante ficar doente & Tarefas não feitas \\ \hline
+10 & Dificuldade de comunicação com as clínicas geriátricas durante a pandemia & Dificuldade no levantamento dos requisitos do cliente\\\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Riscos de Produto}
+\begin{tabular}{|l|C{6cm}|L{8cm}|}
+\hline
+\rowcolor[HTML]{A8DADC}
+\textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+11 & Solução não atende as expectativas do usuário final & Erro na parte da elicitação de requisitos, retrabalho para refatorar documentos e código \\ \hline
+12 & Umidade relativa externa elevada & Perda da efetividade medicamentosa \\ \hline
+13 & Exposição a agentes patológicos no ambiente & Medicamento contaminado\\ \hline
+\end{tabular}
+\end{table}
+
+%\subsubsection{Análise dos Riscos de Projeto, Externos e do Produto}
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos e Ações}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+        \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+        1 & Mitigar & Pensamento crítico à respeito da arquitetura e procurar professores e outros suportes para a sua construção	 & 3 & 5 & 15\\ \hline
+        2 & Prevenir & Validando constantemente com os \textit{stakeholders}		 & 3 & 4 & 12\\ \hline
+        3 & Prevenir & Realizando sempre todos os rituais e incentivando a comunicação por \textit{issue} & 5 & 5 & 25\\ \hline
+        4 & Mitigar & Mantendo o pensamento critico e estratégico à respeito das métricas coletadas e realizando todos os rituais & 3 & 4 & 12\\ \hline
+        5 & Aceitar & Realocação de tarefas & 2 & 4 & 8\\ \hline
+        6 & Prevenir & Mostrar o propósito de suas ações, trazendo a sensação de responsabilidade, além de aproximar o time na tomada de decisão & 4 & 5 & 20\\ \hline
+        7 & Prevenir & Utilizando técnicas de priorização e estar constantemente reavaliando a priorização & 3 & 3 & 9\\ \hline
+        8 & Aceitar & Reavaliar planejamento do projeto & 1 & 5 & 5\\ \hline
+        9 & Aceitar & Replanejar as tarefas e, se possível, dar um suporte maior à pessoa doente & 3 & 2 & 6\\ \hline
+        10 & Mitigar & Buscar artigos, protocolos e normas farmacêuticas & 4 & 3 & 12 \\ \hline
+        11 & Prevenir & Deve ser evitado, realizando uma pesquisa de mercado e avaliando o interesse do público alvo na aplicação & 2 & 4 & 8\\ \hline
+        12 & Prevenir & Avisos indicando a umidade dentro da máquina e vedação dos compartimentos para o armazenamento de remédios& 2 & 4 & 8\\ \hline
+        13 & Prevenir & Usar equipamento de proteção individual (EPIs) e destacar os medicamentos sólidos do blister em uma sala estéril & 2 & 5 & 10\\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+\subsection{Riscos Técnicos}
+
+% \subsubsection{Riscos Estruturais}
+\subparagraph*{$\bullet$ Riscos Estruturais} \hfill
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos Técnicos Estruturais}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        1 & Estrutura não suportar as cargas estáticas & Falha estrutural geral \\ \hline
+        2 & Fixação inadequada dos componentes da estrutura & Impossibilidade de operar \\ \hline
+        3 & Contêiner de medicamentos impede que eles sejam liberados & Rotação permanente do motor de passo dos contêineres \\ \hline
+        4 & Falha das Engrenagens do mecanismo de seleção presente nos contêineres & Funcionamento incorreto do modelo, medicação pode ficar presa no contêiner
+        \\ \hline
+        5 & Falha nos suportes ou mancais dos eixos do sistema de seleção & Funcionamento incorreto do motor de fuso \\ \hline
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption*{}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        6 & Falha dos eixos das engrenagens do sistema de seleção & Funcionamento incorreto da seleção de medicamentos \\ \hline
+        7 & Sistema de seleção integrado ao contêiner dos medicamentos não permite sua correta higienização & Impossibilidade de realizar manutenção periódica, risco biológico aos usuários \\ \hline
+        8 & Sistema de seleção dos comprimidos não consegue liberar toda a medicação presente no recipiente & Funcionamento perpétuo do motor de fuso \\ \hline
+        9 & Falha na interação entre o fuso do mecanismo de seleção dos remédios e as engrenagens & Desgaste físico do equipamento por mau funcionamento \\ \hline
+        10 & Falta de lubrificação dos elementos rotativos &  Desgaste prematuro dos componentes \\ \hline
+        11 & Exposição à umidade e calor aos medicamentos & Degradação dos medicamentos antes do prazo \\ \hline
+        12 & Suportes, mancais e rolamentos apresentam problemas de dimensionamento ou ausência de lubrificação & Obstrução do movimento dos elementos engrenagens, eixos ou fusos \\ \hline
+        13 & Elaboração inadequada do cone de direcionamento & Dutos não conseguem conduzir os comprimidos dispensados até o recipiente \\ \hline
+        14 & Desvio das correntes unifilares da esteira & Funcionamento incorreto que pode levar a queda do copo no movimento da esteira \\ \hline
+        15 & Copos ficam presos no reservatório de copos & Perca dos medicamentos dentro dos compartimentos internos e risco biológico aos usuários \\ \hline
+        16 & Copos inclinam após a ejeção do copo pelo atuador & Copo pode girar e cair em local indesejado \\ \hline
+
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Análise dos Riscos e Ações Estruturais}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+        \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+        1 & Prevenir & Dedicar tempo para seleção adequada de materiais e fazer simulações de desempenho estrutural & 1 & 5 & 5 \\ \hline
+        2 & Prevenir & Simulações estruturais da dinâmica da máquina para averiguar o funcionamento correto dos componentes & 3 & 5 & 15 \\ \hline
+        3 & Prevenir & Avaliação adequada das dimensões dos comprimidos e garantir tolerâncias que possibilitem a queda & 2 & 5 & 10 \\ \hline
+        4 & Mitigar & Fazer conformidade via simulação numérica para resistências e atribuir valores adequados de cotagem e tolerâncias, além de realizar manutenções preventivas & 1 & 5 & 5 \\ \hline
+    \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption*{}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+        \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+        5 & Mitigar & Fazer conformidade via simulação numérica para resistências e atribuir valores adequados de cotagem e tolerâncias, além de realizar manutenções preventivas & 1 & 5 & 5 \\ \hline
+        6 & Mitigar & Fazer conformidade via simulação numérica para resistências e atribuir valores adequados de cotagem e tolerâncias, além de realizar manutenções preventivas & 1 & 5 & 5 \\ \hline
+        7 & Prevenir & Elaboração adequada do arranjo de contêineres e componentes eletrônicos, a fim de permitir limpeza correta & 3 & 5 & 15 \\ \hline
+        8 & Prevenir & Elaborar estrutura de giro adequada que garanta varredura completa do contêiner & 3 & 5 & 15 \\ \hline
+        9 & Prevenir & Assegurar montagem e operação correta por manutenções preventivas & 1 & 5 & 5 \\ \hline
+        10 & Prevenir & Verificação de material adequado para operação, assim como manutenções preventivas & 1 & 3 & 3 \\ \hline
+        11 & Prevenir & Garantir estrutura com isolamento adequado para os contêineres  &  1 & 5 & 5 \\ \hline
+        12 & Prevenir & Atribuir valores adequados de cotagem e tolerâncias, e realizar manutenções preventivas & 1 & 5  & 5 \\ \hline
+        13 & Prevenir & Garantir solução com geometria adequada para queda & 1 & 5 & 5 \\ \hline
+        14 & Mitigar & Assegurar funcionamento correto, via manual de instalação, e fazer manutenções preventivas & 1 & 3 & 3 \\ \hline
+        15 & Prevenir & Garantir espaçamento através de cotas suficientemente grandes, para evitar obstrução do reservatório & 1 & 3 & 3 \\ \hline
+        16 & Prevenir & Garantir espaçamento suficientemente pequeno, para evitar rotação do copo & 1 & 3 & 3 \\ \hline
+
+    \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+% \hspace{1cm}
+% \subsubsection{Riscos Eletrônicos}
+\subparagraph*{$\bullet$ Riscos Eletrônicos} \hfill
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos Técnicos Eletrônicos}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        1 & Falha no sensoriamento & Perda de dados essenciais \\ \hline
+        2 & Falha no Barramento de dados & Perda da comunicação com sensores ou atuadores \\ \hline
+        3 & Falha na comunicação de internet & Perda de alguns recursos do Aplicativo \textit{Mobile}\\ \hline
+        4 & Falhas no sistema de alimentação dos componentes eletrônicos & Perda de todas as funcionalidades\\ \hline
+        5 & Falha no sistema de controle central & Perda de todas as funcionalidades\\ \hline
+        6 & Falha na autentificação por biometria & Não abertura das portas de armazenamento e retirada do medicamento\\ \hline
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption*{}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        7 & Falha no controle dos atuadores & Perda da capacidade de transporte de medicamento \\ \hline
+        8 & Corromper banco de dados local & Perda de dados atualizados \\ \hline
+        9 & Falha da obtenção de imagens & Perda da capacidade de verificar a dose medicamentosa \\ \hline
+        10 & Curto Circuito & Mal funcionamento de todas as funções\\ \hline
+        11 & Interferência Eletromagnética & Inconsistência no funcionamento do sistema\\ \hline
+        12 & Processamento Errado das imagens & Ministração de doses erradas para o paciente\\ \hline
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Análise dos Riscos e Ações Eletrônicos}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+        \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+        1 & Mitigar & Desenvolver testes individuais para
+        os sensores e desenvolver um sistema de avisos & 2 & 5 & 10 \\ \hline
+        2 & Mitigar & Desenvolver um sistema de avisos & 3 & 5 & 15 \\ \hline
+        3 & Mitigar & Guardar dados necessários e enviar quando a conexão for reestabelecida & 4 & 3 & 12 \\ \hline
+        4 & Prevenir & Assegurar dimensionamento correto dos parâmetros desejados & 1 & 5 & 5 \\ \hline
+        5 & Prevenir & Manter condições ambientais para o bom funcionamento da \textit{Raspberry} & 2 & 5 & 10 \\ \hline
+        6 & Mitigar & Possibilitar a releitura da digital & 3 & 4 & 12\\ \hline
+        7 & Prevenir & Desenvolvimento de circuito de proteção & 2 & 5 & 10 \\ \hline
+        8 & Mitigar & Restaurar banco de dados do servidor & 2 & 3 & 6 \\ \hline
+        9 & Prevenir & Avisar inconsistências na imagem da câmera & 3 & 5 & 15 \\ \hline
+        10 & Mitigar & Realizar manutenção da máquina & 2 & 5 & 10 \\ \hline
+        11 & Prevenir & Blindar máquina contra interferência eletromagnética externa & 1 & 4 & 4 \\ \hline
+        12 & Prevenir & Desenvolver sistema robusto de classificação & 2 & 5 & 10 \\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+% \subsubsection{Riscos Energéticos}
+\subparagraph*{$\bullet$ Riscos Energéticos} \hfill
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos Técnicos Energéticos}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        
+        1 & Mau funcionamento da fonte principal de alimentação &  Falha na execução do \textit{firmware}; Falhas nas leituras dos sensores \\ \hline
+        2 & Sobrecarga elétrica & Danificar o sistema elétrico do equipamento  \\ \hline
+        3 & Falha ou perda de desempenho da bateria & Desligamento brusco do equipamento \\ \hline
+        4 & Falha no \text{driver} da solenoide & Falha no funcionamento do solenoide e do atuador elétrico \\\hline
+        5 & Falha no motor de operação dos compartimentos & Atraso na entrega dos medicamentos.  \\ \hline
+        6 & Superdimensionamento dos dispositivos de proteção & Sobreaquecimento e risco de incêndios e acidentes em geral \\ \hline
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption*{}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        
+        7 & Falha no sistema de carregamento da bateria & Não acionamento da bateria \\\hline
+        8 & Falha na solenoide de abertura da porta de saída & Registro indevido da entrega de medicamentos \\\hline
+        9 & Falha no motor DC & Travamento da esteira \\\hline
+        10 & Subdimensionamento dos cabos & Aquecimento dos condutores \\ \hline
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos e Ações Energéticos}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+    \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+    \hline
+    \rowcolor[HTML]{A8DADC}
+    \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+    1 & Prevenir & Realizar o diagnóstico de falha & 2 & 5 & 10\\ \hline
+    2 & Prevenir & Verificar a tomada em que o aparelho está ligado/ Verificar sistema de proteção do circuito & 1 & 5 & 5\\ \hline
+    3 & Prevenir & Realizar supervisão do sistema de proteção & 2 & 5 & 10 \\ \hline
+    4 & Prevenir & Realizar diagnóstico de falhas e rotinas de testes & 1 & 4 & 8 \\ \hline
+    5 & Prevenir & Realizar diagnóstico de falhas e rotinas de testes & 3 & 5 & 15 \\ \hline
+    6 & Prevenir  & Realizar corretamente o dimensionamento & 2 & 4 & 8 \\ \hline
+    7 & Prevenir & Realizar manutenção do equipamento & 2 & 4 & 8 \\ \hline
+    8 & Prevenir & Realizar diagnóstico de falhas e rotinas de testes & 2 & 5 & 10 \\ \hline
+    9 & Prevenir & Realizar diagnóstico de falhas e rotinas de testes & 2 & 5 & 10 \\ \hline
+    10 & Prevenir &  Realizar corretamente o dimensionamento & 2 & 5 & 10 \\ \hline
+    \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+
+% \subsubsection{Riscos Software}
+\subparagraph*{$\bullet$ Riscos em \textit{Software} } \hfill
+
+\begin{table}[H]
+    \centering
+    \caption{Riscos Técnicos de Software}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        1 & Dificuldade com as tecnologias adotadas & Não respeito ao prazo e redução da qualidade de entrega \\ \hline
+        2 & Atraso nas entregas & Planejamento não se cumpre e ocorre um aumento do prazo \\
+        \hline
+        3 & Hospedagem cara ou com custos & Impossibilidade de hospedar aplicação     \\
+        \hline
+        4 & Falha na priorização dos requisitos & Retrabalho e prolongamento do tempo de desenvolvimento planejado\\ \hline
+        5 & Falta de conhecimento em hospedagem de microsserviços & Dificuldades para hospedagem da aplicação\\ 
+        \hline
+        6 & Falta de \textit{Docker}  & Equipe com dificuldades de subir a aplicação em sua máquina pessoal e atraso do planejamento\\
+        \hline
+        
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \caption*{}
+    \begin{adjustbox}{max width = 0.9\textwidth}
+    %\begin{adjustwidth}{-1,2cm}{}
+        \begin{tabular}{|l|C{6cm}|L{8cm}|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Risco} & \textbf{Consequência} \\ \hline
+        
+        
+        7 & Novos requisitos & Replanejamento e Repriorização do Projeto\\ 
+        \hline
+        8 & Falta de adaptação da linguagem & Maior tempo para entrega das atividades, devido ao tempo dedicado ao estudo da linguagem\\ 
+        \hline
+        9 & Falta de testes unitários & A funcionalidade pode apresentar defeitos que inicialmente não foram identificados\\
+        \hline
+        10 & Integração entre \textit{Raspberry} e \textit{backend} não funcionar & não tem como ser atualizado os locais dos medicamentos, nem enviadas as medicações que deverão ser entregues em determinado horário\\
+        \hline
+        11 & Servidor em nuvem não estar disponível 24h & limitar o aplicativo com funcionalidades locais, onde não necessite usar o servidor\\
+        \hline
+        \end{tabular}
+    %\end{adjustwidth}
+    \end{adjustbox}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Análise dos Riscos e Ações de Software}
+    \begin{adjustbox}{max width = \textwidth}
+    % \begin{adjustwidth}{-2,5cm}{}
+        \begin{tabular}{|L{1cm}|c|L{8cm}|c|c|c|}
+        \hline
+        \rowcolor[HTML]{A8DADC}
+        \textbf{ID} & \textbf{Ação} & \multicolumn{1}{|c|}{\textbf{Ação Reativa}} & \textbf{Probabilidade} & \textbf{Impacto} & \textbf{Prioridades}\\ \hline
+        1 & Mitigar & Promover treinamentos, conteúdo online, programação pareada entre os membros & 4 & 4 & 16\\ \hline
+        2 & Prevenir & Realizando os rituais e observando ao longo da \textit{sprint} as maiores dificuldades do time de desenvolvimento & 3 & 4 & 12\\ \hline
+        3 & Prevenir & Fazendo uma pesquisa de mercado, onde vamos identificar qual empresa terá o melhor custo benefício para nossa necessidade e financeiro & 2 & 3 & 6\\ \hline
+        4 & Prevenir & Respeitando as etapas de elicitação, utilizando o \textit{moscow} e alinhando a prioridade com a diretora de qualidade & 3 & 4 & 12\\ \hline
+        5 & Mitigar & Pesquisando, desde o início do projeto, como faremos a hospedagem de um microsserviço & 4 & 4 & 16\\ \hline
+        6 & Mitigar & Criar um \textit{docker} para a \textit{API} e outro pro \textit{front}, evitando que tenhamos dependências desatualizadas e ambientes com instalações diferentes & 2 & 5 & 10\\ \hline
+        7 & Prevenir & Fazer o processo de elicitação utilizando mais de um artefato, comunicar diariamente com as outras áreas técnicas & 3 & 4 & 12\\ \hline
+        8 & Mitigar & Começar os estudos na tecnologia adotada com antecedência, utilizar tecnologias que a maioria dos membros tem familiaridade & 3 & 4 & 12\\ \hline
+        9 & Prevenir & Criar um plano de testes, com uma política de \textit{commits}, no qual a funcionalidade só será adicionada na \textit{branch master} se possuir os testes & 2 & 5 & 10\\ \hline
+        10 & Mitigar & fazer a revisão do código, parear com eletrônica, estudar um pouco mais os protocolos de comunicação & 3 & 5 & 15\\ \hline
+        11 & Prevenir & Contratar o servidor com maior estabilidade e que ofereça o serviço 24/7 & 2 & 5 & 10\\ \hline
+        \end{tabular}
+    % \end{adjustwidth}
+    \end{adjustbox}
+\end{table}

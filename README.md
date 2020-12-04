@@ -13,3 +13,5 @@ Repositório destinado para documentação do projeto Controle de medicação pa
 - **PC2:** Relatório técnico para o Ponto de Controle 2
 
 - **PC3:** Relatório técnico para o Ponto de Controle 3
+
+- **PCFINAL:** Relatório técnico para final da disciplina
